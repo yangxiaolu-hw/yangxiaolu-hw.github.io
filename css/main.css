@@ -468,8 +468,7 @@ nav .persona,
   width: 150px;
 }
 
-#animation #animation-4.step-4,
-#animation #animation-4.step-5 {
+#animation #animation-4.step-4 {
   opacity: 100%;
 }
 
@@ -529,4 +528,101 @@ nav .persona,
 
 #goback-to-hand {
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  #animation #animation-2.step-5 img {
+    top: 20px;
+    left: 20px;
+  }
+
+  #animation #animation-3.step-5 img {
+    top: 30px;
+    left: 95px;
+    width: 150px;
+  }
+
+  #animation #animation-5 img {
+    top: calc(50vh - 100px);
+    left: calc(50vw - 300px / 2 - 15px);
+    width: 300px;
+  }
+
+  #animation #animation-5 button.storia {
+    top: calc(50vh - 120px);
+    left: calc(50vw - 70px / 2 - 15px);
+  }
+
+  #animation #animation-5 button.cultura {
+    top: calc(50vh - 60px);
+    left: calc(50vw - 300px / 2 - 15px);
+  }
+
+  #animation #animation-5 button.cibi {
+    top: calc(50vh - 60px);
+    left: calc(50vw + 300px / 2 - 67px - 15px);
+  }
+
+  #animation #animation-5 button.universita {
+    top: calc(50vh + 240px);
+    left: calc(50vw - 300px / 2 + 30px - 15px);
+  }
+
+  #animation #animation-5 button.persona {
+    top: calc(50vh + 240px);
+    left: calc(50vw + 300px / 2 - 74px - 15px);
+  }
+
+  nav ul li {
+    width: 70px;
+    font-size: 16px;
+    padding: 5px 4px;
+  }
+
+  nav {
+    padding-top: calc(8vh + 90px);
+  }
+
+  .logo-text > .logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 20px;
+    top: 20px;
+  }
+
+  .logo-text > .text {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    left: 128px;
+    top: 38px;
+  }
+}
+
+@media (max-width: 575px) {
+  .logo-text > .logo {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 5px;
+    top: 5px;
+  }
+
+  .logo-text > .text {
+    position: absolute;
+    width: 75px;
+    height: 37px;
+    left: 100px;
+    top: 18px;
+  }
+
+  nav {
+    padding-top: calc(8vh + 30px);
+  }
+
+  .page p {
+    max-height: calc(100vh - 150px - 30px);
+    overflow: scroll;
+  }
 }

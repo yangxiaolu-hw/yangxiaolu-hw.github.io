@@ -32,7 +32,7 @@
   <div id="animation-3" class="step-0"><img src="img/text@2x.png"/></div>
   <div id="animation-4" class="step-0"><img src="img/hand@2x.png"/></div>
   <div id="animation-5" class="step-0">
-    <img src="img/hand-2@2x.png"/>
+    <img id="hand-2-img" src="img/hand-2@2x.png"/>
     <button class="storia">Storia</button>
     <button class="cultura">Cultura</button>
     <button class="cibi">Cibi</button>
@@ -147,9 +147,48 @@
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script>
-  window.onload = function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);
+
+    if (window.innerWidth <= 700) {
+      for (let div of $$("#animation > div")) {
+        div.classList.remove("step-0");
+        div.classList.add("step-5");
+      }
+      $("#hand-2-img").src = "img/hand-2-mobile@2x.png"
+      $("#animation-5 .storia").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#storia";
+      }
+      $("#animation-5 .cultura").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#cultura";
+      }
+      $("#animation-5 .cibi").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#cibi";
+      }
+      $("#animation-5 .universita").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#universita";
+      }
+      $("#animation-5 .persona").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#persona";
+      }
+    }
+
     $("nav").style.display = "none";
     $(".content").style.display = "none";
     $("body").onclick = function () {
@@ -244,7 +283,7 @@
         window.location.hash = "#persona";
       }
     }
-  }
+  });
 </script>
 </body>
 
