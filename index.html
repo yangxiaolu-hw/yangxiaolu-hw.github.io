@@ -51,7 +51,7 @@
     <li class="universita"><a href="#universita">Universita</a></li>
     <li class="persona"><a href="#persona">Persona</a></li>
   </ul>
-  <img src="img/hand@2x.png" class="hand"/>
+  <img src="img/hand@2x.png" class="hand" id="goback-to-hand"/>
 </nav>
 <div class="content">
   <div class="page storia">
@@ -154,6 +154,37 @@
     $(".content").style.display = "none";
     $("body").onclick = function () {
       for (let div of $$(".step-4")) {
+        $("#animation-5 .storia").onclick = function () {
+          $("#animation").style.display = "none";
+          $("nav").style.display = "inline-block";
+          $(".content").style.display = "block";
+          window.location.hash = "#storia";
+        }
+        $("#animation-5 .cultura").onclick = function () {
+          $("#animation").style.display = "none";
+          $("nav").style.display = "inline-block";
+          $(".content").style.display = "block";
+          window.location.hash = "#cultura";
+        }
+        $("#animation-5 .cibi").onclick = function () {
+          $("#animation").style.display = "none";
+          $("nav").style.display = "inline-block";
+          $(".content").style.display = "block";
+          window.location.hash = "#cibi";
+        }
+        $("#animation-5 .universita").onclick = function () {
+          $("#animation").style.display = "none";
+          $("nav").style.display = "inline-block";
+          $(".content").style.display = "block";
+          window.location.hash = "#universita";
+        }
+        $("#animation-5 .persona").onclick = function () {
+          $("#animation").style.display = "none";
+          $("nav").style.display = "inline-block";
+          $(".content").style.display = "block";
+          window.location.hash = "#persona";
+        }
+
         div.classList.remove("step-4");
         div.classList.add("step-5");
       }
@@ -174,35 +205,44 @@
         div.classList.add("step-1");
       }
     }
-    $("#animation-5 .storia").onclick = function () {
-      $("#animation").style.display = "none";
-      $("nav").style.display = "inline-block";
-      $(".content").style.display = "block";
-      window.location.hash = "#storia";
-    }
-    $("#animation-5 .cultura").onclick = function () {
-      $("#animation").style.display = "none";
-      $("nav").style.display = "inline-block";
-      $(".content").style.display = "block";
-      window.location.hash = "#cultura";
-    }
-    $("#animation-5 .cibi").onclick = function () {
-      $("#animation").style.display = "none";
-      $("nav").style.display = "inline-block";
-      $(".content").style.display = "block";
-      window.location.hash = "#cibi";
-    }
-    $("#animation-5 .universita").onclick = function () {
-      $("#animation").style.display = "none";
-      $("nav").style.display = "inline-block";
-      $(".content").style.display = "block";
-      window.location.hash = "#universita";
-    }
-    $("#animation-5 .persona").onclick = function () {
-      $("#animation").style.display = "none";
-      $("nav").style.display = "inline-block";
-      $(".content").style.display = "block";
-      window.location.hash = "#persona";
+    $("#goback-to-hand").onclick = function () {
+      $("nav").style.display = "none";
+      $(".content").style.display = "none";
+      $("#animation").style.display = "block";
+      for (let div of $$("#animation > div")) {
+        div.classList.remove("step-4");
+        div.classList.add("step-5");
+      }
+      $("#animation-5 .storia").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#storia";
+      }
+      $("#animation-5 .cultura").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#cultura";
+      }
+      $("#animation-5 .cibi").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#cibi";
+      }
+      $("#animation-5 .universita").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#universita";
+      }
+      $("#animation-5 .persona").onclick = function () {
+        $("#animation").style.display = "none";
+        $("nav").style.display = "inline-block";
+        $(".content").style.display = "block";
+        window.location.hash = "#persona";
+      }
     }
   }
 </script>

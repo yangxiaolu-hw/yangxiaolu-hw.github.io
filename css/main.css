@@ -7,6 +7,8 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+/* 700px+ work fine */
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -434,16 +436,16 @@ nav .persona,
 }
 
 #animation #animation-2.step-3 img {
-  top: calc(50vh - 389px / 2);
-  left: calc(40vw - 349px / 2);
+  top: calc(50vh - 400px / 2);
+  left: calc(50vw - 525px / 2);
   width: 250px;
   opacity: 100%;
 }
 
 #animation #animation-2.step-4 img,
 #animation #animation-2.step-5 img {
-  top: 9vh;
-  left: 7vw;
+  top: calc(10vh - 12px);
+  left: calc(12vw - 75px);
   width: 120px;
 }
 
@@ -455,7 +457,7 @@ nav .persona,
 
 #animation #animation-3.step-3 img {
   top: calc(50vh - 290px / 2);
-  left: calc(50vw - 349px / 2);
+  left: calc(50vw - 210px / 2);
   width: 250px;
 }
 
@@ -501,26 +503,30 @@ nav .persona,
 }
 
 #animation #animation-5 button.storia {
-  left: calc(50vw - 100px / 2);
-  top: 35vh;
+  top: calc(70vh - 526px / 2);
+  left: calc(50vw - 578px / 2 + 225px);
 }
 
 #animation #animation-5 button.cultura {
-  left: calc(50vw - 300px);
-  top: 45vh;
+  top: calc(70vh - 526px / 2 + 70px);
+  left: calc(50vw - 578px / 2 - 50px);
 }
 
 #animation #animation-5 button.cibi {
-  left: calc(50vw + 200px);
-  top: 45vh;
+  top: calc(70vh - 526px / 2 + 70px);
+  left: calc(50vw + 578px / 2 - 50px);
 }
 
 #animation #animation-5 button.universita {
-  left: calc(50vw - 300px);
-  top: 80vh;
+  top: calc(70vh + 526px / 2 - 170px);
+  left: calc(50vw - 578px / 2 + 40px);
 }
 
 #animation #animation-5 button.persona {
-  left: calc(50vw + 200px);
-  top: 80vh;
+  top: calc(70vh + 526px / 2 - 170px);
+  left: calc(50vw + 578px / 2 - 140px);
+}
+
+#goback-to-hand {
+  cursor: pointer;
 }
